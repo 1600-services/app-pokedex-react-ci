@@ -2,4 +2,4 @@ test
 cypress
 README.mode
 cypress.config.js
-.gitignore
+.gitignore 
