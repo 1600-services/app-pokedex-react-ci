@@ -1,5 +1,4 @@
-name: Testing Pipeline
-
+name: Testing
 on:
   push:
     branches: [master]
