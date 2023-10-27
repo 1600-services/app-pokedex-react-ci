@@ -4,4 +4,4 @@ module.exports = {
     specPattern: 'cypress/integration/app.js',
     vide: false
   }
-};
+}
