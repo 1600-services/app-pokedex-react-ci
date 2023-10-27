@@ -5,4 +5,4 @@ module.exports = {
     video: false,
     supportFile: false
   }
-};
+}
