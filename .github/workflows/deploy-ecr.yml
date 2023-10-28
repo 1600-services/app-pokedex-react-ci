@@ -1,8 +1,8 @@
 ---
-name: Build and Push Golang Image to AWS ECR
+name: Push image to ecr
 on:
   workflow_run:
-    workflows: [testing]
+    workflows: [Testing]
     types:
       - completed
 jobs:
