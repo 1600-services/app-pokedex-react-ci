@@ -26,10 +26,11 @@ jobs:
 
     - name: Automatic Tagging of Releases
       id: increment-git-tag
-      run: |
-        bash ./build/git_update.sh -v patch
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+      run: |
+        bash ./build/git_update.sh -v patch
+
 
     - name: Build, Tag, and Push the Image to Amazon ECR
       id: build-image
@@ -39,7 +40,7 @@ jobs:
         IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
 
         
