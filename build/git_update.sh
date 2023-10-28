@@ -10,7 +10,7 @@ do
   esac
 done
 
-# get highest tag number, and add v0.0.1 if doesn't exist
+# get highest tag number, and add v0.0.0 if doesn't exist
 git fetch --prune --unshallow 2>/dev/null
 CURRENT_VERSION=`git describe --abbrev=0 --tags 2>/dev/null`
 
