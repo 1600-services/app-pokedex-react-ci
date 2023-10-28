@@ -1,5 +1,5 @@
 ---
-name: Push image to ecr
+name: Push image to ecr 
 on:
   workflow_run:
     workflows: [Testing]
