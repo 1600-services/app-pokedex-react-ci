@@ -27,7 +27,7 @@ jobs:
     - name: Automatic Tagging of Releases
       id: increment-git-tag
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
       run: |
         bash ./build/git_update.sh -v patch
 
