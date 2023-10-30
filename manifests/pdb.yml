@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: pokedex-pdb
+  namespace: local
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: my-app
